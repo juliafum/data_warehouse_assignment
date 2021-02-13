@@ -23,27 +23,6 @@ time_table_drop = "drop table if exists time"
 
 # CREATE TABLES
 
-# staging_events_table_create = ("""create table if not exists staging_events (
-# artist varchar(200),
-# auth varchar(20),
-# first_name varchar(50),
-# gender varchar(1),
-# item_in_session int,
-# last_name varchar(50),
-# length numeric(10,5),
-# level varchar(50),
-# location text,
-# method varchar(5),
-# page varchar(10),
-# registration float,
-# session_id int,
-# song text,
-# status int,
-# ts bigint,
-# user_agent varchar(200),
-# user_id int
-# )
-# """)
 
 staging_events_table_create = ("""create table if not exists staging_events (
 artist varchar(500),
