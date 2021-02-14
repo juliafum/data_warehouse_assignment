@@ -152,7 +152,7 @@ artist_table_insert = ("""insert into artists (artist_id, artist_name,artist_loc
 """)
 
 time_table_insert = ("""INSERT INTO time (start_time,hour,week, month,year,weekday)
-                        select timestamp 'epoch' + ts/1000 * interval '1 second' as start_time,
+                        select distinct timestamp 'epoch' + ts/1000 * interval '1 second' as start_time,
                         extract (hour from timestamp 'epoch' + ts/1000 * interval '1 second') as hour,
                         extract (week from timestamp 'epoch' + ts/1000 * interval '1 second') as week,
                         extract (month from timestamp 'epoch' + ts/1000 * interval '1 second') as month,
